@@ -21,6 +21,7 @@ export function Register() {
     profile_pic: '',
     email: '',
     password: '',
+    confirm_password: '',
   });
 
   const handleChange = (field: string, value: string) => {
@@ -44,8 +45,15 @@ export function Register() {
     setLoading(true);
     setMessage(null);
 
+    if (formData.password !== formData.confirm_password) {
+      setMessage({ type: 'error', text: 'Passwords do not match' });
+      setLoading(false);
+      return;
+    }
+
     try {
-      const response = await registerUser(formData);
+      const { confirm_password, ...apiData } = formData;
+      const response = await registerUser(apiData);
       if (response.status === 'success') {
         setMessage({ type: 'success', text: response.message });
         setTimeout(() => {
@@ -185,6 +193,19 @@ export function Register() {
                   placeholder="••••••••"
                   value={formData.password}
                   onChange={(e) => handleChange('password', e.target.value)}
+                  required
+                  className="h-12 border-slate-200 focus:border-[#8959c8]/50 bg-white/50 rounded-xl px-4 font-medium"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="confirm_password" className="text-slate-700 font-bold text-sm ml-1 uppercase tracking-wider">Confirm Password</Label>
+                <Input
+                  id="confirm_password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={formData.confirm_password}
+                  onChange={(e) => handleChange('confirm_password', e.target.value)}
                   required
                   className="h-12 border-slate-200 focus:border-[#8959c8]/50 bg-white/50 rounded-xl px-4 font-medium"
                 />
