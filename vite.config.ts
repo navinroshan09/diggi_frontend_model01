@@ -27,6 +27,13 @@ export default defineConfig({
   server: {
     https: false,
     host: true,
+    proxy: {
+      '/api': {
+        target: 'http://thediggi.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   resolve: {
     alias: {
