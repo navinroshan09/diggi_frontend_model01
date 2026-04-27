@@ -52,8 +52,7 @@ export function Register() {
     }
 
     try {
-      const { confirm_password, ...apiData } = formData;
-      const response = await registerUser(apiData);
+      const response = await registerUser(formData);
       if (response.status === 'success') {
         setMessage({ type: 'success', text: response.message });
         setTimeout(() => {
@@ -61,9 +60,11 @@ export function Register() {
         }, 1500);
       }
     } catch (error: any) {
+      console.error('Registration error details:', error);
+      const errorMessage = error.response?.data?.message || error.message || 'Registration failed. Please try again.';
       setMessage({
         type: 'error',
-        text: error.response?.data?.message || 'Registration failed. Please try again.',
+        text: errorMessage,
       });
     } finally {
       setLoading(false);

@@ -20,6 +20,7 @@ export const registerUser = async (userData: {
   profile_pic: string;
   email: string;
   password: string;
+  confirm_password: string;
 }) => {
   const response = await api.post('/register', userData);
   return response.data;
