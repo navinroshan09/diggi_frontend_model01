@@ -100,10 +100,20 @@ export function ResultsPage() {
             )}
             
             {response.status === 'success' || (response && response.status !== 'vague' && response.status !== 'error') ? (
-              <SearchResults 
-                  data={response?.status === 'success' ? response.data : response} 
-                  onSearch={handleSearch}
-              />
+              <div className="space-y-16">
+                {Array.isArray(response?.status === 'success' ? response.data : response) 
+                  ? (response?.status === 'success' ? response.data : response).map((item: any, idx: number) => (
+                      <div key={idx} className="relative">
+                        {idx > 0 && <div className="absolute -top-8 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-purple-300/30 to-transparent"></div>}
+                        <SearchResults data={item} onSearch={handleSearch} />
+                      </div>
+                    ))
+                  : <SearchResults 
+                      data={response?.status === 'success' ? response.data : response} 
+                      onSearch={handleSearch}
+                    />
+                }
+              </div>
             ) : (
                 <div className="text-center p-12 bg-white/70 backdrop-blur-xl rounded-2xl border border-white/40 shadow-xl shadow-amber-500/5">
                     <Sparkles className="w-12 h-12 text-amber-500 mx-auto mb-4" />
