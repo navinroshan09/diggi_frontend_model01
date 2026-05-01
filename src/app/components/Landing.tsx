@@ -49,15 +49,15 @@ export function Landing() {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-slate-900 tracking-tight">
-                Deep-Dive into <br/> 
+                A Deep-Dive into <br/> 
                 <span className="bg-gradient-to-r from-[#8959c8] to-[#cc78b8] bg-clip-text text-transparent">
-                  Verified Truth
+                  News
                 </span>
               </h1>
               
               <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-xl">
                 Navigate the complex world of news with confidence. Get multi-source verification, 
-                credibility analysis, and contextual insights in seconds.
+                credibility analysis and contextual insight.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -83,20 +83,7 @@ export function Landing() {
                 </Button>
               </div>
               
-              <div className="flex items-center gap-8 pt-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  </div>
-                  <span className="text-sm text-slate-500 font-bold uppercase tracking-wider">No credit card required</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  </div>
-                  <span className="text-sm text-slate-500 font-bold uppercase tracking-wider">Free forever plan</span>
-                </div>
-              </div>
+
             </div>
             
             <div className="relative">
@@ -116,10 +103,10 @@ export function Landing() {
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-slate-900 tracking-tight">
-              Why Choose <span className="text-[#8959c8]">Diggi</span>?
+              Why <span className="text-[#8959c8]">Diggi</span>?
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
-              Leverage advanced AI technology to verify news, compare sources, and make informed decisions
+              Leverage advanced AI technology to verify and compare sources to better understand what’s happening in the news.
             </p>
           </div>
           
@@ -206,10 +193,10 @@ export function Landing() {
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-slate-900 tracking-tight">How It Works</h2>
-            <p className="text-xl text-slate-600 font-medium">Simple, fast, and reliable news analysis in three steps</p>
+            <p className="text-xl text-slate-600 font-medium">Clear, fast and reliable news analysis in no time.</p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="w-20 h-20 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-purple-500/10 flex items-center justify-center mx-auto mb-8 text-3xl font-black text-[#8959c8]">
                 1
@@ -224,9 +211,9 @@ export function Landing() {
               <div className="w-20 h-20 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-purple-500/10 flex items-center justify-center mx-auto mb-8 text-3xl font-black text-[#8959c8]">
                 2
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">Clarify</h3>
+              <h3 className="text-2xl font-bold mb-4 text-slate-900">Analyze</h3>
               <p className="text-slate-600 font-medium leading-relaxed">
-                If the query is too broad, our AI will ask for specifics to ensure accuracy.
+                Our AI will cross-check multiple sources and evaluate credibility signals.
               </p>
             </div>
             
@@ -234,17 +221,7 @@ export function Landing() {
               <div className="w-20 h-20 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-purple-500/10 flex items-center justify-center mx-auto mb-8 text-3xl font-black text-[#8959c8]">
                 3
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">Verifying</h3>
-              <p className="text-slate-600 font-medium leading-relaxed">
-                AI cross-checks multiple sources and evaluates credibility signals.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-purple-500/10 flex items-center justify-center mx-auto mb-8 text-3xl font-black text-[#8959c8]">
-                4
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">Deep Insights</h3>
+              <h3 className="text-2xl font-bold mb-4 text-slate-900">Get Insights</h3>
               <p className="text-slate-600 font-medium leading-relaxed">
                 Receive a detailed report with scores, evidence, and historical context.
               </p>
@@ -260,10 +237,10 @@ export function Landing() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">
-                Ready to Start <br/> Analyzing News?
+                Ready to Start?
               </h2>
               <p className="text-xl text-purple-50 mb-12 font-medium">
-                Join thousands of users who trust Diggi for accurate, verified news analysis
+                Join thousands of people who trust Diggi for accurate, contextual news analysis.
               </p>
               <Button 
                 asChild
@@ -279,6 +256,23 @@ export function Landing() {
           </Card>
         </div>
       </section>
+
+      {/* Footer / Contact */}
+      <footer className="py-12 bg-transparent text-center border-t border-slate-200/50 mt-12 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 flex flex-col items-center justify-center gap-4">
+          <div className="flex items-center gap-2 group cursor-pointer">
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#8959c8] to-[#cc78b8] flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-sm">D</span>
+            </span>
+            <span className="text-xl font-bold text-slate-800">Diggi</span>
+          </div>
+          <p className="text-slate-600 font-medium mt-4">
+            <a href="mailto:Support@diggi.ai" className="hover:text-[#8959c8] transition-colors">Support@diggi.ai</a>
+            <span className="mx-4 text-slate-300">|</span>
+            <span>Support: +1 (555) 123-4567</span>
+          </p>
+        </div>
+      </footer>
 
       </div>
     </div>

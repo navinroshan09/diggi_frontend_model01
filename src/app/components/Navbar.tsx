@@ -30,7 +30,7 @@ export function Navbar() {
             <div className="hidden md:flex items-center space-x-6 mr-4">
               <Link to="/" className="text-sm font-bold text-slate-600 hover:text-[#8959c8] transition-colors">Home</Link>
               <a href="/#about" className="text-sm font-bold text-slate-600 hover:text-[#8959c8] transition-colors">About</a>
-              <a href="/#working" className="text-sm font-bold text-slate-600 hover:text-[#8959c8] transition-colors">Working</a>
+              <a href="/#working" className="text-sm font-bold text-slate-600 hover:text-[#8959c8] transition-colors">Tool</a>
               <a href="/#contact" className="text-sm font-bold text-slate-600 hover:text-[#8959c8] transition-colors">Contact</a>
             </div>
 
